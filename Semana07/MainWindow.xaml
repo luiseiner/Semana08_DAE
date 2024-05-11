@@ -1,0 +1,42 @@
+﻿<Window x:Class="Semana07.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Semana07"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+
+
+        <DataGrid x:Name="dgPeople" Margin="27,78,217,40" AutoGenerateColumns="False" SelectionMode="Single"  IsReadOnly="True" Grid.Row="0" HorizontalAlignment="Center" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding CustomerID}"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Dirección" Binding="{Binding Address}"/>
+                <DataGridTextColumn Header="Teléfono" Binding="{Binding Phone}"/>
+                <DataGridCheckBoxColumn Header="Activo" Binding="{Binding Active}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Button Content="Eliminar" Click="EliminarSeleccionadoButton_Click" Background="Red" Margin="332,14,282,361"/>
+        
+
+
+        <Button Content="Listar" Click="Button_Click" HorizontalAlignment="Left" Margin="102,27,0,0" VerticalAlignment="Top" Height="26" Width="176"/>
+        <TextBox HorizontalAlignment="Left" Margin="643,108,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" x:Name="name"/>
+        <TextBox HorizontalAlignment="Left" Margin="643,156,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" x:Name="addres"/>
+        <TextBox HorizontalAlignment="Left" Margin="643,199,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" x:Name="pone"/>
+        <CheckBox Content="activo" HorizontalAlignment="Left" Margin="673,236,0,0" VerticalAlignment="Top" x:Name="activoCheckBox"/>
+        <Button Content="Agregar" Click="Button_agregar" HorizontalAlignment="Left" Margin="650,288,0,0" VerticalAlignment="Top" Height="52" Width="106"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="671,82,0,0" VerticalAlignment="Top"/>
+        <Label Content="Direccion" HorizontalAlignment="Left" Margin="672,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="Telefono" HorizontalAlignment="Left" Margin="671,177,0,0" VerticalAlignment="Top"/>
+
+
+
+
+    </Grid>
+</Window>
